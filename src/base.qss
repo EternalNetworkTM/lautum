@@ -1,0 +1,368 @@
+/* Metadata */
+
+OBSThemeMeta {
+    dark: 'true';
+    author: 'Eternal Network';
+}
+
+
+/* Palette */
+
+OBSTheme {
+    /* Background */
+    window: {window};
+    base: {base};
+    alternateBase: {alternate_base};
+    button: {button};
+
+    /* Foreground */
+    windowText: {window_text};
+    text: {text};
+    brightText: {bright_text};
+    buttonText: {button_text};
+
+    /* Highlight */
+    highlight: {highlight};
+    highlightedText: {highlighted_text};
+    link: {link};
+    linkVisited: {linkVisited};
+}
+
+
+/* Base style */
+
+QWidget {
+    color: palette(window-text);
+    background-color: palette(window);
+    alternate-background-color: palette(base);
+    selection-color: palette(highlighted-text);
+    selection-background-color: palette(highlight);
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', '.AppleSystemUIFont', Helvetica, 'Segoe UI', Arial, sans-serif;
+    font-size: 10pt;
+}
+
+
+/* Misc */
+
+QAbstractItemView,
+QStackedWidget#stackedMixerArea QWidget {
+    background-color: palette(base);
+}
+
+QToolTip {
+    color: palette(window-text);
+    background-color: palette(base);
+    border: none;
+}
+
+QMenuBar::item {
+    background-color: palette(window);
+}
+
+QListView::item:selected:!active,
+SourceTree::item:selected:!active {
+    color: palette(window-text);
+    background-color: palette(button);
+}
+
+QListView QLineEdit,
+SourceTree QLineEdit {
+    padding: 0 0 0 2px;
+}
+
+
+/* Dock Widget */
+
+QDockWidget {
+	titlebar-close-icon: url('./Dark/close.svg');
+	titlebar-normal-icon: url('./Dark/popout.svg');
+}
+
+
+/* Source Context */
+
+#contextContainer QPushButton#sourcePropertiesButton {
+    qproperty-icon: url('./Dark/settings/general.svg');
+}
+
+#contextContainer QPushButton#sourceFiltersButton {
+    qproperty-icon: url('./Dark/filter.svg');
+}
+
+#contextContainer QPushButton#sourceInteractButton {
+    qproperty-icon: url('./Dark/interact.svg');
+}
+
+
+/* Scenes and Source toolbar */
+
+QToolBar {
+    background-color: palette(window);
+}
+
+* [themeID="addIconSmall"] {
+    qproperty-icon: url('./Dark/plus.svg');
+}
+
+* [themeID="removeIconSmall"] {
+    qproperty-icon: url('./Dark/minus.svg');
+}
+
+* [themeID="clearIconSmall"] {
+    qproperty-icon: url('./Dark/entry-clear.svg');
+}
+
+* [themeID="propertiesIconSmall"] {
+    qproperty-icon: url('./Dark/settings/general.svg');
+}
+
+* [themeID="configIconSmall"] {
+    qproperty-icon: url('./Dark/settings/general.svg');
+}
+
+* [themeID="refreshIconSmall"] {
+    qproperty-icon: url('./Dark/refresh.svg');
+}
+
+* [themeID="upArrowIconSmall"] {
+    qproperty-icon: url('./Dark/up.svg');
+}
+
+* [themeID="downArrowIconSmall"] {
+    qproperty-icon: url('./Dark/down.svg');
+}
+
+* [themeID="pauseIconSmall"] {
+    qproperty-icon: url('./Dark/media-pause.svg');
+}
+
+* [themeID="menuIconSmall"] {
+    qproperty-icon: url('./Dark/dots-vert.svg');
+}
+
+* [themeID="cogsIcon"] {
+    qproperty-icon: url('./Dark/cogs.svg');
+}
+
+
+/* Tab Widget */
+
+QTabWidget::pane {
+    border-top: 1px solid palette(base);
+}
+
+QTabWidget::tab-bar {
+    alignment: left;
+}
+
+QTabBar::tab {
+    background-color: palette(button);
+}
+
+QTabBar::tab:selected {
+    background-color: palette(base);
+}
+
+
+/* Buttons */
+
+QPushButton {
+    padding: 4px 12px;
+    color: palette(window-text);
+    background-color: palette(button);
+}
+
+QPushButton::flat {
+    background-color: palette(base);
+}
+
+QPushButton::menu-indicator {
+    width: 10%;
+    image: url('./Dark/down.svg');
+    subcontrol-position: right;
+    subcontrol-origin: padding;
+}
+
+
+/* TextEdit */
+
+QLineEdit,
+QTextEdit,
+QPlainTextEdit {
+    padding: 4px;
+    background-color: palette(base);
+}
+
+
+/* SpinBox */
+
+QSpinBox,
+QDoubleSpinBox {
+    padding: 4px;
+    background-color: palette(base);
+}
+
+
+/* ComboBox */
+
+QDateTimeEdit,
+QComboBox {
+    padding: 2px 2px 2px 8px;
+    background-color: palette(button);
+}
+
+
+/* Status bar */
+
+QStatusBar::item {
+    border: none;
+}
+
+
+/* Mute */
+
+MuteCheckBox::indicator:checked {
+    image: url('./Dark/mute.svg');
+}
+
+MuteCheckBox::indicator:unchecked {
+    image: url('./Dark/settings/audio.svg');
+}
+
+
+/* Pause */
+
+PauseCheckBox {
+    outline: none;
+}
+
+PauseCheckBox::indicator:checked {
+    image: url(':/res/images/media-pause.svg');
+}
+
+PauseCheckBox::indicator:unchecked {
+    image: url(':/res/images/media-play.svg');
+}
+
+
+/* Group Collapse Checkbox */
+
+SourceTreeSubItemCheckBox::indicator:checked {
+    image: url('./Dark/expand.svg');
+}
+
+SourceTreeSubItemCheckBox::indicator:unchecked {
+    image: url('./Dark/collapse.svg');
+}
+
+
+/* Preview */
+
+OBSQTDisplay {
+	qproperty-displayBackgroundColor: palette(button);
+}
+
+
+/* Settings Icons */
+
+OBSBasicSettings {
+    qproperty-generalIcon: url('./Dark/settings/general.svg');
+    qproperty-streamIcon: url('./Dark/settings/stream.svg');
+    qproperty-outputIcon: url('./Dark/settings/output.svg');
+    qproperty-audioIcon: url('./Dark/settings/audio.svg');
+    qproperty-videoIcon: url('./Dark/settings/video.svg');
+    qproperty-hotkeysIcon: url('./Dark/settings/hotkeys.svg');
+    qproperty-accessibilityIcon: url('./Dark/settings/accessibility.svg');
+    qproperty-advancedIcon: url('./Dark/settings/advanced.svg');
+}
+
+LockedCheckBox::indicator:checked {
+    image: url('./Dark/locked.svg');
+}
+
+LockedCheckBox::indicator:unchecked {
+    image: url(':res/images/unlocked.svg');
+}
+
+VisibilityCheckBox::indicator:checked {
+    image: url('./Dark/visible.svg');
+}
+
+VisibilityCheckBox::indicator:unchecked {
+    image: url(':res/images/invisible.svg');
+}
+
+* [themeID="revertIcon"] {
+    qproperty-icon: url('./Dark/revert.svg');
+}
+
+OBSMissingFiles {
+	qproperty-warningIcon: url('./Dark/alert.svg');
+}
+
+
+/* Source Icons */
+
+OBSBasic {
+    qproperty-imageIcon: url('./Dark/sources/image.svg');
+    qproperty-colorIcon: url('./Dark/sources/brush.svg');
+    qproperty-slideshowIcon: url('./Dark/sources/slideshow.svg');
+    qproperty-audioInputIcon: url('./Dark/sources/microphone.svg');
+    qproperty-audioOutputIcon: url('./Dark/settings/audio.svg');
+    qproperty-desktopCapIcon: url('./Dark/settings/video.svg');
+    qproperty-windowCapIcon: url('./Dark/sources/window.svg');
+    qproperty-gameCapIcon: url('./Dark/sources/gamepad.svg');
+    qproperty-cameraIcon: url('./Dark/sources/camera.svg');
+    qproperty-textIcon: url('./Dark/sources/text.svg');
+    qproperty-mediaIcon: url('./Dark/sources/media.svg');
+    qproperty-browserIcon: url('./Dark/sources/globe.svg');
+    qproperty-groupIcon: url('./Dark/sources/group.svg');
+    qproperty-sceneIcon: url('./Dark/sources/scene.svg');
+    qproperty-defaultIcon: url('./Dark/sources/default.svg');
+    qproperty-audioProcessOutputIcon: url('./Dark/sources/windowaudio.svg');
+}
+
+
+/* Save icon */
+
+* [themeID="replayIconSmall"] {
+    qproperty-icon: url('./Dark/save.svg');
+}
+
+
+/* Media icons */
+
+* [themeID="playIcon"] {
+    qproperty-icon: url('./Dark/media/media_play.svg');
+}
+
+* [themeID="pauseIcon"] {
+    qproperty-icon: url('./Dark/media/media_pause.svg');
+}
+
+* [themeID="restartIcon"] {
+    qproperty-icon: url('./Dark/media/media_restart.svg');
+}
+
+* [themeID="stopIcon"] {
+    qproperty-icon: url('./Dark/media/media_stop.svg');
+}
+
+* [themeID="nextIcon"] {
+    qproperty-icon: url('./Dark/media/media_next.svg');
+}
+
+* [themeID="previousIcon"] {
+    qproperty-icon: url('./Dark/media/media_previous.svg');
+}
+
+
+/* macOS Separator Fix */
+
+QMainWindow::separator {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+}

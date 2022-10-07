@@ -1,0 +1,17 @@
+# Background
+window: "rgb(31, 31, 31)"
+base: "rgb(23, 23, 23)"
+alternate_base: "rgb(27, 27, 27)"
+button: "rgb(51, 51, 51)"
+
+# Foreground
+window_text: "rgb(255, 255, 255)"
+text: "rgb(255, 255, 255)"
+bright_text: "rgb(255, 255, 255)"
+button_text: "rgb(255, 255, 255)"
+
+# Highlight
+highlight: "rgb(0, 115, 230)"
+highlighted_text: "rgb(0, 0, 0)"
+link: "rgb(0, 115, 230)"
+linkVisited: "rgb(0, 89, 179)"
