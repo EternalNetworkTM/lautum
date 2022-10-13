@@ -44,32 +44,70 @@ QWidget {
 }
 
 
-/* Misc */
+/* Buttons */
 
-QAbstractItemView,
-QStackedWidget#stackedMixerArea QWidget {
-    background-color: palette(base);
-}
-
-QToolTip {
-    color: palette(window-text);
-    background-color: palette(base);
-    border: none;
-}
-
-QMenuBar::item {
-    background-color: palette(window);
-}
-
-QListView::item:selected:!active,
-SourceTree::item:selected:!active {
+QPushButton {
+    padding: 4px 12px;
     color: palette(window-text);
     background-color: palette(button);
 }
 
-QListView QLineEdit,
-SourceTree QLineEdit {
-    padding: 0 0 0 2px;
+QPushButton::flat {
+    background-color: palette(base);
+}
+
+QPushButton::menu-indicator {
+    width: 10%;
+    image: url('./Dark/down.svg');
+    subcontrol-position: right;
+    subcontrol-origin: padding;
+}
+
+
+/* ComboBox */
+
+QDateTimeEdit,
+QComboBox {
+    padding: 2px 2px 2px 8px;
+    background-color: palette(button);
+}
+
+
+/* SpinBox */
+
+QSpinBox,
+QDoubleSpinBox {
+    padding: 4px;
+    background-color: palette(base);
+}
+
+
+/* TextEdit */
+
+QLineEdit,
+QTextEdit,
+QPlainTextEdit {
+    padding: 4px;
+    background-color: palette(base);
+}
+
+
+/* Tab widget */
+
+QTabWidget::pane {
+    border-top: 1px solid palette(base);
+}
+
+QTabWidget::tab-bar {
+    alignment: left;
+}
+
+QTabBar::tab {
+    background-color: palette(button);
+}
+
+QTabBar::tab:selected {
+    background-color: palette(base);
 }
 
 
@@ -81,22 +119,14 @@ QDockWidget {
 }
 
 
-/* Source Context */
+/* Status bar */
 
-#contextContainer QPushButton#sourcePropertiesButton {
-    qproperty-icon: url('./Dark/settings/general.svg');
-}
-
-#contextContainer QPushButton#sourceFiltersButton {
-    qproperty-icon: url('./Dark/filter.svg');
-}
-
-#contextContainer QPushButton#sourceInteractButton {
-    qproperty-icon: url('./Dark/interact.svg');
+QStatusBar::item {
+    border: none;
 }
 
 
-/* Scenes and Source toolbar */
+/* Toolbars */
 
 QToolBar {
     background-color: palette(window);
@@ -147,81 +177,81 @@ QToolBar {
 }
 
 
-/* Tab Widget */
+/* Source context */
 
-QTabWidget::pane {
-    border-top: 1px solid palette(base);
+#contextContainer QPushButton#sourcePropertiesButton {
+    qproperty-icon: url('./Dark/settings/general.svg');
 }
 
-QTabWidget::tab-bar {
-    alignment: left;
+#contextContainer QPushButton#sourceFiltersButton {
+    qproperty-icon: url('./Dark/filter.svg');
 }
 
-QTabBar::tab {
-    background-color: palette(button);
+#contextContainer QPushButton#sourceInteractButton {
+    qproperty-icon: url('./Dark/interact.svg');
 }
 
-QTabBar::tab:selected {
+
+/* Preview */
+
+OBSQTDisplay {
+	qproperty-displayBackgroundColor: palette(button);
+}
+
+
+/* Settings */
+
+OBSBasicSettings {
+    qproperty-generalIcon: url('./Dark/settings/general.svg');
+    qproperty-streamIcon: url('./Dark/settings/stream.svg');
+    qproperty-outputIcon: url('./Dark/settings/output.svg');
+    qproperty-audioIcon: url('./Dark/settings/audio.svg');
+    qproperty-videoIcon: url('./Dark/settings/video.svg');
+    qproperty-hotkeysIcon: url('./Dark/settings/hotkeys.svg');
+    qproperty-accessibilityIcon: url('./Dark/settings/accessibility.svg');
+    qproperty-advancedIcon: url('./Dark/settings/advanced.svg');
+}
+
+
+/* Misc */
+
+QAbstractItemView,
+QStackedWidget#stackedMixerArea QWidget {
     background-color: palette(base);
 }
 
+QToolTip {
+    color: palette(window-text);
+    background-color: palette(base);
+    border: none;
+}
 
-/* Buttons */
+QMenuBar::item {
+    background-color: palette(window);
+}
 
-QPushButton {
-    padding: 4px 12px;
+QListView::item:selected:!active,
+SourceTree::item:selected:!active {
     color: palette(window-text);
     background-color: palette(button);
 }
 
-QPushButton::flat {
-    background-color: palette(base);
-}
-
-QPushButton::menu-indicator {
-    width: 10%;
-    image: url('./Dark/down.svg');
-    subcontrol-position: right;
-    subcontrol-origin: padding;
+QListView QLineEdit,
+SourceTree QLineEdit {
+    padding: 0 0 0 2px;
 }
 
 
-/* TextEdit */
+/* macOS separator fix */
 
-QLineEdit,
-QTextEdit,
-QPlainTextEdit {
-    padding: 4px;
-    background-color: palette(base);
+QMainWindow::separator {
+    width: 4px;
+    height: 4px;
+    background: transparent;
 }
 
 
-/* SpinBox */
-
-QSpinBox,
-QDoubleSpinBox {
-    padding: 4px;
-    background-color: palette(base);
-}
-
-
-/* ComboBox */
-
-QDateTimeEdit,
-QComboBox {
-    padding: 2px 2px 2px 8px;
-    background-color: palette(button);
-}
-
-
-/* Status bar */
-
-QStatusBar::item {
-    border: none;
-}
-
-
-/* Mute */
+/* Mute checkbox */
 
 MuteCheckBox::indicator:checked {
     image: url('./Dark/mute.svg');
@@ -232,7 +262,7 @@ MuteCheckBox::indicator:unchecked {
 }
 
 
-/* Pause */
+/* Pause checkbox */
 
 PauseCheckBox {
     outline: none;
@@ -247,7 +277,7 @@ PauseCheckBox::indicator:unchecked {
 }
 
 
-/* Group Collapse Checkbox */
+/* Group collapse checkbox */
 
 SourceTreeSubItemCheckBox::indicator:checked {
     image: url('./Dark/expand.svg');
@@ -258,25 +288,7 @@ SourceTreeSubItemCheckBox::indicator:unchecked {
 }
 
 
-/* Preview */
-
-OBSQTDisplay {
-	qproperty-displayBackgroundColor: palette(button);
-}
-
-
-/* Settings Icons */
-
-OBSBasicSettings {
-    qproperty-generalIcon: url('./Dark/settings/general.svg');
-    qproperty-streamIcon: url('./Dark/settings/stream.svg');
-    qproperty-outputIcon: url('./Dark/settings/output.svg');
-    qproperty-audioIcon: url('./Dark/settings/audio.svg');
-    qproperty-videoIcon: url('./Dark/settings/video.svg');
-    qproperty-hotkeysIcon: url('./Dark/settings/hotkeys.svg');
-    qproperty-accessibilityIcon: url('./Dark/settings/accessibility.svg');
-    qproperty-advancedIcon: url('./Dark/settings/advanced.svg');
-}
+/* Locked checkbox */
 
 LockedCheckBox::indicator:checked {
     image: url('./Dark/locked.svg');
@@ -285,6 +297,9 @@ LockedCheckBox::indicator:checked {
 LockedCheckBox::indicator:unchecked {
     image: url(':res/images/unlocked.svg');
 }
+
+
+/* Visibility checkbox */
 
 VisibilityCheckBox::indicator:checked {
     image: url('./Dark/visible.svg');
@@ -298,12 +313,8 @@ VisibilityCheckBox::indicator:unchecked {
     qproperty-icon: url('./Dark/revert.svg');
 }
 
-OBSMissingFiles {
-	qproperty-warningIcon: url('./Dark/alert.svg');
-}
 
-
-/* Source Icons */
+/* Source icons */
 
 OBSBasic {
     qproperty-imageIcon: url('./Dark/sources/image.svg');
@@ -322,6 +333,13 @@ OBSBasic {
     qproperty-sceneIcon: url('./Dark/sources/scene.svg');
     qproperty-defaultIcon: url('./Dark/sources/default.svg');
     qproperty-audioProcessOutputIcon: url('./Dark/sources/windowaudio.svg');
+}
+
+
+/* Missing files icon */
+
+OBSMissingFiles {
+	qproperty-warningIcon: url('./Dark/alert.svg');
 }
 
 
@@ -356,13 +374,4 @@ OBSBasic {
 
 * [themeID="previousIcon"] {
     qproperty-icon: url('./Dark/media/media_previous.svg');
-}
-
-
-/* macOS Separator Fix */
-
-QMainWindow::separator {
-    width: 4px;
-    height: 4px;
-    background: transparent;
 }
