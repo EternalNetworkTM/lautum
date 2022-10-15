@@ -3,6 +3,9 @@ window: "rgb(31, 31, 31)"
 base: "rgb(23, 23, 23)"
 alternate_base: "rgb(27, 27, 27)"
 button: "rgb(51, 51, 51)"
+light: "rgb(72, 72, 72)"
+mid: "rgb(48, 48, 48)"
+dark: "rgb(40, 40, 40)"
 
 # Foreground
 window_text: "rgb(255, 255, 255)"
@@ -15,3 +18,12 @@ highlight: "rgb(0, 115, 230)"
 highlighted_text: "rgb(0, 0, 0)"
 link: "rgb(0, 115, 230)"
 linkVisited: "rgb(0, 89, 179)"
+
+# Sliders
+slider_handle: "rgb(255, 255, 255)"
+slider_handle_disabled: "rgb(96, 96, 96)"
+slider_groove_fill: "rgb(255, 255, 255)"
+slider_groove_fill_disabled: "rgb(96, 96, 96)"
+
+# Layout
+border_radius: "3px"
