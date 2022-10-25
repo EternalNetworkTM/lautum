@@ -616,15 +616,24 @@ QMenuBar::item {
     background-color: palette(window);
 }
 
-QListView::item:selected:!active,
-SourceTree::item:selected:!active {
+QListView::item,
+SourceTree::item {
     color: palette(window-text);
+}
+
+QListView::item:hover,
+SourceTree::item:hover {
+    background-color: palette(light);
+}
+
+QListView::item:selected,
+SourceTree::item:selected {
     background-color: palette(button);
 }
 
-QListView QLineEdit,
-SourceTree QLineEdit {
-    padding: 0 0 0 2px;
+QListView::item:selected:hover,
+SourceTree::item:selected:hover {
+    background-color: palette(light);
 }
 
 
