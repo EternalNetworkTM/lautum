@@ -355,13 +355,13 @@ QSlider::handle:vertical:disabled {
 
 QSlider::groove:horizontal {
     height: 2px;
-    background-color: palette(button);
+    background-color: palette(dark);
     border: none;
 }
 
 QSlider::groove:vertical {
     width: 2px;
-    background-color: palette(button);
+    background-color: palette(dark);
     border: none;
 }
 
@@ -575,7 +575,7 @@ SceneTree {
 /* Preview */
 
 OBSQTDisplay {
-	qproperty-displayBackgroundColor: palette(button);
+	qproperty-displayBackgroundColor: palette(mid);
 }
 
 * [themeID="previewProgramLabels"] {
