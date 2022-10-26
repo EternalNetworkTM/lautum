@@ -494,6 +494,34 @@ QScrollBar::sub-page:horizontal {
 }
 
 
+/* Menus */
+
+QMenu::item {
+    padding: 4px 8px;
+    border: none;
+}
+
+QMenu::item:hover,
+QMenu::item:selected,
+QMenu::item:selected:hover {
+    background-color: palette(light);
+}
+
+QMenu::icon {
+    left: 4px;
+}
+
+QMenu::right-arrow {
+    image: url('./Dark/expand.svg');
+}
+
+QMenu::separator {
+    background: palette(button);
+    height: 1px;
+    margin: 4px;
+}
+
+
 /* Status bar */
 
 QStatusBar::item {
