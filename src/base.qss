@@ -80,6 +80,7 @@ QPushButton:disabled {
 
 QPushButton::menu-indicator {
     width: 10%;
+    margin-right: 5px;
     image: url('./Dark/down.svg');
     subcontrol-position: right;
     subcontrol-origin: padding;
