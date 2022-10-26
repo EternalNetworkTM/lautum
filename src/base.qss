@@ -315,6 +315,46 @@ QDockWidget::float-button:pressed {
 }
 
 
+/* List widgets */
+
+QListWidget::item,
+SceneTree::item {
+    padding: 2px;
+}
+
+SourceTreeItem {
+    padding: 3px 2px;
+}
+
+QListWidget::item,
+SceneTree::item,
+SourceTree::item {
+    color: palette(window-text);
+    border: none;
+}
+
+QListWidget::item:hover,
+SceneTree::item:hover,
+SourceTree::item:hover,
+QListWidget::item:selected:hover,
+SceneTree::item:selected:hover,
+SourceTree::item:selected:hover {
+    background-color: palette(light);
+}
+
+QListWidget::item:selected,
+SceneTree::item:selected,
+SourceTree::item:selected {
+    background-color: palette(button);
+}
+
+QListWidget QLineEdit,
+SceneTree QLineEdit,
+SourceTree QLineEdit {
+    padding:  0px;
+}
+
+
 /* Table View */
 
 QTableView {
@@ -598,6 +638,10 @@ OBSBasicSettings {
     qproperty-advancedIcon: url('./Dark/settings/advanced.svg');
 }
 
+OBSBasicSettings QListWidget::item {
+    padding: 6px;
+}
+
 
 /* Misc */
 
@@ -614,26 +658,6 @@ QToolTip {
 
 QMenuBar::item {
     background-color: palette(window);
-}
-
-QListView::item,
-SourceTree::item {
-    color: palette(window-text);
-}
-
-QListView::item:hover,
-SourceTree::item:hover {
-    background-color: palette(light);
-}
-
-QListView::item:selected,
-SourceTree::item:selected {
-    background-color: palette(button);
-}
-
-QListView::item:selected:hover,
-SourceTree::item:selected:hover {
-    background-color: palette(light);
 }
 
 
