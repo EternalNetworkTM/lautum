@@ -163,6 +163,7 @@ QDoubleSpinBox::up-button {
     background-color: palette(button);
     border: none;
     border-radius: {border_radius};
+    border-top-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -176,6 +177,7 @@ QDoubleSpinBox::down-button {
     border-radius: {border_radius};
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 QSpinBox::up-button:hover,
