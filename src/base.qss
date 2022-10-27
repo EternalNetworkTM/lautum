@@ -699,9 +699,10 @@ QStackedWidget#stackedMixerArea QWidget {
 }
 
 QToolTip {
+    padding: 2px;
     color: palette(window-text);
     background-color: palette(base);
-    border: none;
+    border: 1px solid palette(button);
 }
 
 QMenuBar::item {
