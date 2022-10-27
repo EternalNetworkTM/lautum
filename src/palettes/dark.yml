@@ -25,5 +25,8 @@ slider_handle_disabled: "rgb(75, 78, 82)"
 slider_groove_fill: "rgb(75, 78, 82)"
 slider_groove_fill_disabled: "rgb(75, 78, 82)"
 
+# Preview
+preview_program_labels: "rgb(145, 152, 161)"
+
 # Layout
 border_radius: "3px"

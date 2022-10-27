@@ -650,7 +650,7 @@ OBSQTDisplay {
 }
 
 * [themeID="previewProgramLabels"] {
-    color: rgb(128, 128, 128);
+    color: {preview_program_labels};
     font-size: 16px;
     font-weight: bold;
 }
